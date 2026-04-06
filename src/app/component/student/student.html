@@ -1,0 +1,32 @@
+<h4> Student Table Component</h4>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Age</th>
+            <th>Status</th>
+            <th>CanEnroll</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(std of students ; track std.sid){
+            <tr>
+            <td>{{std.sid}}</td>
+            <td>{{std.sname}}</td>
+            <td>{{std.course}}</td>
+            <td>{{std.age}}</td>
+            <td [ngClass]="{
+                'text-warning' : std.status === 'active',
+                'text-danger' : std.status === 'inactive',
+                'text-success': std.status === 'completed'
+            }">{{std.status}}</td>
+            <td >{{std.canEnroll ? 'Yes' : 'No'}}</td>
+        </tr>
+        }
+       
+    </tbody>
+</table>

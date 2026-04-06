@@ -1,0 +1,12 @@
+
+<h4 class="text-dark">List Component </h4>
+
+<ul class="list-group">
+    @for(skill of skills; track i ; let i = $index; let isEven = $even; let isOdd = $odd){
+         <li class="list-group-item" 
+         [class.bg-danger]="isEven"
+         [class.bg-warning]="isOdd">
+            {{skill}}
+         </li>
+    }
+</ul>

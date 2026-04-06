@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ]
           },
@@ -87,5 +88,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "2aec3d07-c5ac-4015-9c77-6b775fd5602f"
   }
 }
